@@ -1,5 +1,6 @@
 @import './libs/reset.scss';
 @import './libs/mixins.scss';
+@import './libs/responsive.scss';
 
 
 // Fonts
@@ -122,3 +123,11 @@ main {
     //grid-area: tileContact;
 }
 
+
+@media only screen and (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(203, 7, 251);
+    }
+    }
