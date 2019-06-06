@@ -1,0 +1,124 @@
+@import './libs/reset.scss';
+@import './libs/mixins.scss';
+
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+// script : ./dart-sass/sass sass/style.scss  assets/css/style.css --watch
+
+// Palette des couleurs 
+
+$lightestGrey   : rgb(195, 194, 194);
+$lightGrey           : rgb(161, 161, 161);
+$standardGrey      : rgb(109, 109, 109);
+$darkerGrey   : rgb(44, 44, 44);
+$darkestGrey : rgb(27, 27, 27);
+$deepBlack  : rgba(8, 8, 8, 0.89);
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    padding: 1rem 1rem 0rem 0rem;
+    margin: 1rem;
+}
+
+a {
+    &:hover {
+        color: blue;
+    }
+}
+
+header {
+    height: 5rem;
+    background-color: $lightGrey;
+}
+
+body {
+    background-color: white;
+    height: 20rem;
+}
+
+footer {
+    height: 5rem;
+    background-color: $lightGrey;
+}
+
+main { 
+    margin: 0 auto;
+    width: auto;
+    background-color: $standardGrey;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 25rem 25rem;
+    grid-template-rows: 17rem;
+    grid-gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem; 
+    margin-top: 2rem;
+}
+
+.tilePic {
+    @include Tiles;
+    //grid-area: tilePic;
+}
+
+.tileName  {
+    @include Tiles;
+    //grid-area: tileName;
+    .name {
+        font-weight: 400;
+    }
+}
+
+.typewriter {
+    font-family: 'Open Sans', sans-serif;
+
+    }
+.typewriter-text {
+    display: inline-block;
+    overflow: hidden;
+    letter-spacing: 0px;
+    animation: typing 2s steps(180, end);
+    white-space: nowrap;
+    font-size: 1.8rem;
+    font-weight: 600;
+    box-sizing: border-box;
+    }
+
+.statusKeyword {
+    background-image: 
+    linear-gradient(to right, #f8d62c 0%, #fde979 100%);
+}
+
+@keyframes typing {
+    from { 
+        width: 0% 
+    }
+    to { 
+        width: 40% 
+    }
+}
+
+
+
+.tileResume {
+    @include Tiles;
+    //grid-area: tileResume;
+}
+
+.tileProjects {
+    @include Tiles;
+    //grid-area: tileProjects;
+}
+
+.tileContact {
+    @include Tiles;
+    //grid-area: tileContact;
+}
+
